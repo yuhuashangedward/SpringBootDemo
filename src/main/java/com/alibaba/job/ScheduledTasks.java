@@ -11,7 +11,8 @@ public class ScheduledTasks {
 
     private static final SimpleDateFormat dateFormat = new SimpleDateFormat("HH:mm:ss");
 
-    @Scheduled(fixedRate = 10000)
+   /* @Scheduled(fixedRate = 10000)*/
+    @Scheduled(cron="*/5 * * * * *")
     public void reportCurrentTime(){
         System.out.println("现在时间：" + dateFormat.format(new Date()));
     }

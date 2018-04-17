@@ -1,23 +1,34 @@
+/*
 package com.alibaba;
 
 import com.alibaba.define.UserService;
+import com.alibaba.job.Task;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.SpringApplicationConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
+import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import org.springframework.test.context.junit4.SpringRunner;
 
-@RunWith(SpringRunner.class)
-@SpringBootTest
+*/
+/*@RunWith(SpringRunner.class)
+@SpringBootTest*//*
+
+@RunWith(SpringJUnit4ClassRunner.class)
+@SpringApplicationConfiguration(classes = DemoApplication.class)
 public class DemoApplicationTests {
 
-	@Test
+	*/
+/*@Test
 	public void contextLoads() {
-	}
+	}*//*
 
-	@Autowired
+
+	*/
+/*@Autowired
 	private UserService userSerivce;
 
 	@Before
@@ -45,5 +56,19 @@ public class DemoApplicationTests {
 		// 查数据库，应该有5个用户
 		Assert.assertEquals(3, userSerivce.getAllUsers().intValue());
 
+	}*//*
+
+
+	@Autowired
+	private Task task;
+
+	@Test
+	public void test() throws Exception{
+		task.doTaskOne();
+		task.doTaskTwo();
+		task.doTaskThree();
 	}
+
+
 }
+*/
